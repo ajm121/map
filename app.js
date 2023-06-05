@@ -262,5 +262,6 @@ app.get("/", (req, res) => {
   </body>
 </html>
 `;
+  res.setHeader('Content-Type', 'text/html');
   res.send(html); // 동적으로 생성된 HTML 파일을 응답으로 보냄
 });
