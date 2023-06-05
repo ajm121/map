@@ -24,7 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up environment variables
+        run: echo "APP_KEY=${{ secrets.APP_KEY }}" >> $GITHUB_ENV
+
       - name: Build and deploy
-        run: |
-          echo "APP_KEY=${{ secrets.APP_KEY }}" >> $GITHUB_ENV
-          node app.js
+        run: node app.js
