@@ -1,5 +1,5 @@
 app.get("/", (req, res) => {
-  const appey = process.env.APP_KEY; // 환경변수에서 APP_KEY를 가져옴
+  const appkey = process.env.APP_KEY; // 환경변수에서 APP_KEY를 가져옴
   const html = `
 <!DOCTYPE html>
 <html>
